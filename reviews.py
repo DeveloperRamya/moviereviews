@@ -33,10 +33,10 @@ data2 = {
 df1 = pd.DataFrame(data1)
 df2 = pd.DataFrame(data2)
 
-Merge the two datasets on the 'index' and 'Position' columns
+#Merge the two datasets on the 'index' and 'Position' columns
 merged_df = pd.merge(df1, df2, left_on='index', right_on='Position')
 
-Display the merged dataset
+#Display the merged dataset
  print(merged_df)
 # Convert 'gross_total' to numeric format
 merged_df['gross_numeric'] = merged_df['gross_total'].replace('[\$,M]', '', regex=True).astype(float)

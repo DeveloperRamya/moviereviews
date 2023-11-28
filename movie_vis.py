@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # Assuming you've already loaded your data into the 'movies_data' DataFrame
 
 # Bar plot: Top 10 movies by IMDb rating
-top_movies = movies_data.nlargest(10, 'IMDb Rating')
+top_movies = reviews.nlargest(10, 'IMDb Rating')
 plt.figure(figsize=(12, 6))
 sns.barplot(x='IMDb Rating', y='movie_name', data=top_movies, palette='viridis')
 plt.title('Top 10 Movies by IMDb Rating')
